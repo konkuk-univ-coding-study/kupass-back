@@ -1,7 +1,7 @@
-package konkuk.kupassback.config;
+package konkuk.kupassbackservice.config;
 
-import konkuk.kupassback.jwt.JWTFilter;
-import konkuk.kupassback.jwt.TokenProvider;
+import konkuk.kupassbackservice.jwt.JWTFilter;
+import konkuk.kupassbackservice.jwt.TokenProvider;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.SecurityConfigurerAdapter;

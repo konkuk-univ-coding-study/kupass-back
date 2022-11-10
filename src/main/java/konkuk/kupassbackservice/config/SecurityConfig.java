@@ -1,8 +1,8 @@
-package konkuk.kupassback.config;
+package konkuk.kupassbackservice.config;
 
-import konkuk.kupassback.jwt.JWTAccessDeniedHandler;
-import konkuk.kupassback.jwt.JWTAuthenticationEntryPoint;
-import konkuk.kupassback.jwt.TokenProvider;
+import konkuk.kupassbackservice.jwt.JWTAccessDeniedHandler;
+import konkuk.kupassbackservice.jwt.JWTAuthenticationEntryPoint;
+import konkuk.kupassbackservice.jwt.TokenProvider;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

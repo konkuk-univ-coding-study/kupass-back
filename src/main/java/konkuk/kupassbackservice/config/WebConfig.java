@@ -1,6 +1,6 @@
-package konkuk.kupassback.config;
+package konkuk.kupassbackservice.config;
 
-import konkuk.kupassback.interceptors.BearerAuthInterceptor;
+import konkuk.kupassbackservice.interceptors.BearerAuthInterceptor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
