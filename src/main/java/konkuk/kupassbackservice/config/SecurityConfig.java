@@ -28,27 +28,27 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         return new BCryptPasswordEncoder();
     }
 
-    @Override
-    protected void configure(HttpSecurity http) throws Exception {
-        http.csrf().disable()
-
-                .exceptionHandling()
-                .authenticationEntryPoint(jwtAuthenticationEntryPoint)
-                .accessDeniedHandler(jwtAccessDeniedHandler)
-
-                .and()
-                .sessionManagement()
-                .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-
-                .and()
-                .authorizeRequests()
-                .antMatchers("/api/search/**").permitAll()
-                .antMatchers("/api/signup/**").permitAll()
-                .antMatchers("/api/authenticate/**").permitAll()
-                .antMatchers("/api/user/**").permitAll()
-                .anyRequest().authenticated()
-
-                .and()
-                .apply(new JWTSecurityConfig(tokenProvider));
-    }
+//    @Override
+//    protected void configure(HttpSecurity http) throws Exception {
+//        http.csrf().disable()
+//
+//                .exceptionHandling()
+//                .authenticationEntryPoint(jwtAuthenticationEntryPoint)
+//                .accessDeniedHandler(jwtAccessDeniedHandler)
+//
+//                .and()
+//                .sessionManagement()
+//                .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+//
+//                .and()
+//                .authorizeRequests()
+//                .antMatchers("/api/search/**").permitAll()
+//                .antMatchers("/api/signup/**").permitAll()
+//                .antMatchers("/api/authenticate/**").permitAll()
+//                .antMatchers("/api/user/**").permitAll()
+//                .anyRequest().authenticated()
+//
+//                .and()
+//                .apply(new JWTSecurityConfig(tokenProvider));
+//    }
 }
