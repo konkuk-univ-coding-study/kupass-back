@@ -67,5 +67,5 @@ jobs:
           sudo docker pull ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_REPOSITORY }}
           sudo docker stop kupass-back-service
           sudo docker rm kupass-back-service
-          sudo docker run -it -d --name kupass-back-service --net kupass-service-net --ip ${{ secrets.HOST }} -v kupass-volume:/kupass-back-service/log -p 8080:8080 ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_REPOSITORY }}
+          sudo docker run -it -d --name kupass-back-service --network host -v kupass-volume:/kupass-back-service/log -p 8080:8080 ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKER_REPOSITORY }}
           sudo docker rmi $(sudo docker images -f "dangling=true" -q)
